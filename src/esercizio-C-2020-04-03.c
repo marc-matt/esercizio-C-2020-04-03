@@ -30,12 +30,12 @@ void print_contact(contact_type * person){
 }
 
 int main(int argc, char *argv[]) {
-	contact_type * pino = create_contact("pino rossi", "+393331234567");
+	contact_type * pino = create_contact("pino rossi\0", "+393331234567\0");
 	if(pino == NULL) {
 		printf("errore in create_contact!\n");
 		exit(EXIT_FAILURE);
 	}
-	contact_type * gino = create_contact("gino verdi", "+393487654321");
+	contact_type * gino = create_contact("gino verdi\0", "+393487654321\0");
 	if(gino == NULL) {
 		printf("errore in create_contact!\n");
 		exit(EXIT_FAILURE);
